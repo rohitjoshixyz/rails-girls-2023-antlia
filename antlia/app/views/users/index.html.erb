@@ -2,14 +2,14 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Posts</h1>
+<h1>Listing Users</h1>
 
 <table class="table">
   <thead>
     <tr>
       <th>Name</th>
       <th>Email</th>
-      <th>Password</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,7 +19,7 @@
       <tr>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-        <td><%= "*"*user.password.length %></td>
+        
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,3 +29,5 @@
 </table>
 
 <br>
+
+<%= link_to "Create Users", new_user_path %>
